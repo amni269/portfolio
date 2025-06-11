@@ -389,12 +389,18 @@ body.dark-mode {
   /* ====== About Page Team Grid ====== */
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    grid-template-columns: auto;
     gap: 2rem;
     max-width: 900px;
     margin: 0 auto 3rem;
     text-align: center;
+  } 
+
+  .team-section h2, .professor-section h2, .about-intro h1, .intro h2, .recent-projects h2  {
+    text-align: center;
   }
+
+  
   
   .team-member {
     background: var(--bg-color);
