@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Portfolio Amni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="projects.html" class="nav-link">Projets</a>
+      <a href="skills.html" class="nav-link">Compétences</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-intro neumorph">
+      <h1>Contactez-moi</h1>
+      <p>Vous pouvez me laisser un message via ce formulaire ou utiliser mes coordonnées ci-dessous.</p>
+    </section>
+
+    <section class="contact-container neumorph">
+      <form id="contactForm" action="#" method="post" class="contact-form">
+        <label for="name">Nom complet</label>
+        <input type="text" id="name" name="name" placeholder="Votre nom" required />
+
+        <label for="email">Adresse email</label>
+        <input type="email" id="email" name="email" placeholder="Votre email" required />
+
+        <label for="subject">Sujet</label>
+        <input type="text" id="subject" name="subject" placeholder="Sujet du message" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+
+        <button type="submit" class="btn-submit neumorph">Envoyer</button>
+      </form>
+
+      <aside class="contact-info">
+        <h2>Mes coordonnées</h2>
+        <p><strong>Email :</strong> amniayoubam@gmail.com</p>
+        <p><strong>Téléphone :</strong> +224 627 78 73 82</p>
+        <p><strong>Adresse :</strong> Conakry, Guinée</p>
+        <p><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/amni-ayouba" target="_blank" rel="noopener">Amni Ayouba Mhoma</a></p>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Bouton retour en haut -->
+  <button id="scrollTop" title="Retour en haut">⬆</button>
+
+  <!-- Footer -->
+  <footer class="neumorph">
+    <p>© 2025 Amni Ayouba Mhoma - Tous droits réservés</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

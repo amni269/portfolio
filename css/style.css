@@ -1,0 +1,493 @@
+/* ====== Variables couleurs ====== */
+:root {
+    --bg-color: #e0e0e0;
+    --shadow-light: #ffffff;
+    --shadow-dark: #a3b1c6;
+    --text-color: #333;
+    --primary-color: #4a90e2;
+    --primary-dark: #3b6bbf;
+    --btn-bg: #e0e0e0;
+    --btn-shadow-light: #ffffff;
+    --btn-shadow-dark: #a3b1c6;
+  }
+  
+
+  /* Mode sombre simple */
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --primary-color: #bb86fc;
+    --primary-dark: #3700b3;
+    --shadow-light: #2a2a2a;
+    --shadow-dark: #000000;
+    --btn-bg: #333333;
+    --btn-shadow-light: #555555;
+    --btn-shadow-dark: #111111;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  
+  /* ====== Reset & base ====== */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    object-fit: cover;
+    height: 300px;
+  }
+
+  #portrait {
+      width: 300px;
+      margin: auto;
+      border-radius: 50%;
+  }
+  
+  /* ====== Conteneur global main ====== */
+  main {
+    flex-grow: 1;
+    max-width: 1200px;
+    margin: 2rem auto 4rem;
+    padding: 0 1rem;
+  }
+  
+  /* ====== Neumorphisme base ====== */
+  .neumorph {
+    background: var(--bg-color);
+    border-radius: 20px;
+    box-shadow:
+      8px 8px 15px var(--shadow-dark),
+      -8px -8px 15px var(--shadow-light);
+    padding: 1.5rem;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  /* ====== Navbar ====== */
+  header {
+    background: var(--bg-color);
+    box-shadow:
+      8px 8px 15px var(--shadow-dark),
+      -8px -8px 15px var(--shadow-light);
+    padding: 0.8rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 2rem;
+  }
+  
+  .navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    box-shadow:
+      4px 4px 6px var(--shadow-dark),
+      -4px -4px 6px var(--shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  .nav-link:hover,
+  .nav-link.active {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow:
+      4px 4px 10px var(--primary-dark),
+      -4px -4px 10px var(--primary-color);
+  }
+  
+  #darkToggle {
+    background: var(--btn-bg);
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50%;
+    box-shadow:
+      4px 4px 6px var(--btn-shadow-dark),
+      -4px -4px 6px var(--btn-shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  #darkToggle:hover {
+    box-shadow:
+      inset 4px 4px 6px var(--btn-shadow-dark),
+      inset -4px -4px 6px var(--btn-shadow-light);
+  }
+  
+  /* ====== Sections ====== */
+  section h1,
+  section h2,
+  section h3 {
+    margin-top: 0;
+    color: var(--primary-dark);
+  }
+  
+  .projects-intro,
+  .skills-intro,
+  .contact-intro {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  /* ====== Projects Grid ====== */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    box-shadow:
+      8px 8px 15px var(--shadow-dark),
+      -8px -8px 15px var(--shadow-light);
+    border-radius: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--bg-color);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+      12px 12px 20px var(--shadow-dark),
+      -12px -12px 20px var(--shadow-light);
+  }
+  
+  .project-card h3 {
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  .project-card p {
+    flex-grow: 1;
+    color: var(--text-color);
+    font-size: 0.95rem;
+  }
+  
+  .btn-link {
+    align-self: flex-start;
+    background: var(--btn-bg);
+    padding: 0.6rem 1rem;
+    border-radius: 12px;
+    box-shadow:
+      4px 4px 6px var(--btn-shadow-dark),
+      -4px -4px 6px var(--btn-shadow-light);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-link:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow:
+      4px 4px 10px var(--primary-dark),
+      -4px -4px 10px var(--primary-color);
+  }
+  
+  /* ====== Filter Buttons ====== */
+  .filter-buttons {
+    margin: 1rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .filter-btn {
+    background: var(--btn-bg);
+    border: none;
+    padding: 0.6rem 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-radius: 12px;
+    box-shadow:
+      4px 4px 6px var(--btn-shadow-dark),
+      -4px -4px 6px var(--btn-shadow-light);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn.active,
+  .filter-btn:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow:
+      4px 4px 10px var(--primary-dark),
+      -4px -4px 10px var(--primary-color);
+  }
+  
+  /* ====== Skills List ====== */
+  .skills-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+  }
+  
+  .skill h3 {
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+  }
+  
+  .progress-bar {
+    background: var(--btn-bg);
+    border-radius: 15px;
+    box-shadow:
+      inset 4px 4px 6px var(--btn-shadow-dark),
+      inset -4px -4px 6px var(--btn-shadow-light);
+    height: 22px;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .progress {
+    background: var(--primary-color);
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    box-shadow:
+      3px 3px 6px var(--primary-dark),
+      -3px -3px 6px var(--primary-color);
+    transition: width 1.5s ease-in-out;
+  }
+  
+  /* ====== Contact Form ====== */
+  .contact-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .contact-form {
+    flex: 1 1 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form label {
+    font-weight: 600;
+    color: var(--primary-dark);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background: var(--bg-color);
+    box-shadow:
+      inset 4px 4px 6px var(--shadow-dark),
+      inset -4px -4px 6px var(--shadow-light);
+    color: var(--text-color);
+    resize: vertical;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow:
+      inset 2px 2px 5px var(--primary-dark),
+      inset -2px -2px 5px var(--primary-color);
+  }
+  
+  .btn-submit {
+    background: var(--btn-bg);
+    border: none;
+    padding: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow:
+      6px 6px 12px var(--btn-shadow-dark),
+      -6px -6px 12px var(--btn-shadow-light);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow:
+      6px 6px 16px var(--primary-dark),
+      -6px -6px 16px var(--primary-color);
+  }
+  
+  /* Contact info aside */
+  .contact-info {
+    flex: 1 1 300px;
+    padding: 1rem 1.5rem;
+    border-radius: 20px;
+    box-shadow:
+      8px 8px 15px var(--shadow-dark),
+      -8px -8px 15px var(--shadow-light);
+    background: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+  .contact-info h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .contact-info p,
+  .contact-info a {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: var(--text-color);
+    text-decoration: none;
+  }
+  
+  .contact-info a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+  }
+  
+  /* ====== About Page Team Grid ====== */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .team-member {
+    background: var(--bg-color);
+    border-radius: 20px;
+    box-shadow:
+      8px 8px 15px var(--shadow-dark),
+      -8px -8px 15px var(--shadow-light);
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .team-member img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow:
+      4px 4px 10px var(--shadow-dark),
+      -4px -4px 10px var(--shadow-light);
+  }
+  
+  .team-member h3 {
+    margin: 0;
+    color: var(--primary-color);
+  }
+  
+  /* ====== Footer ====== */
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--bg-color);
+    box-shadow:
+      inset 4px 4px 8px var(--shadow-dark),
+      inset -4px -4px 8px var(--shadow-light);
+    border-radius: 20px 20px 0 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+  }
+  
+  /* ====== Scroll to top button ====== */
+  #scrollTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--btn-bg);
+    border: none;
+    padding: 0.7rem 0.9rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    cursor: pointer;
+    box-shadow:
+      4px 4px 8px var(--btn-shadow-dark),
+      -4px -4px 8px var(--btn-shadow-light);
+    display: none;
+    transition: background-color 0.3s ease;
+    z-index: 99;
+  }
+  
+  #scrollTop:hover {
+    background: var(--primary-color);
+    color: white;
+    box-shadow:
+      4px 4px 12px var(--primary-dark),
+      -4px -4px 12px var(--primary-color);
+  }
+  
+  /* ====== Responsive ====== */
+  @media (max-width: 768px) {
+    main {
+      margin: 1rem auto 3rem;
+      padding: 0 1rem;
+    }
+  
+    .contact-container {
+      flex-direction: column;
+    }
+  
+    .contact-info, .contact-form {
+      flex: 1 1 100%;
+    }
+  
+    .navbar {
+      justify-content: center;
+      gap: 0.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .project-card {
+      padding: 1rem 0.8rem;
+    }
+  }
+  

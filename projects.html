@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets | Portfolio Amni</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Accueil</a>
+      <a href="about.html" class="nav-link">À propos</a>
+      <a href="projects.html" class="nav-link active">Projets</a>
+      <a href="skills.html" class="nav-link">Compétences</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <button id="darkModeToggle" aria-label="Toggle dark mode">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="projects-intro neumorph">
+      <h1>Mes Projets</h1>
+      <p>Découvrez une sélection de projets réalisés avec différentes technologies.</p>
+
+      <!-- Filtres par technologie -->
+      <div class="filter-buttons neumorph">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="innovation">Innovation</button>
+        <button class="filter-btn" data-filter="mode">Mode</button>
+        <button class="filter-btn" data-filter="programation">Programmation</button>
+        <button class="filter-btn" data-filter="culture">Culture générale</button>
+      </div>
+    </section>
+
+    <section class="projects-grid">
+      <!-- Projet 1 -->
+      <article class="project-card neumorph" data-tech="innovation">
+        <img id="projet-img" src="img/projet1.jpg" alt="Portfolio Neumorphique" />
+        <h3>Nèmè</h3>
+        <p>Nèmè est un dispositif intelligent destiné à faciliter la mobilité des personnes malvoyantes grâce
+            à des lunettes connectées, une canne électronique et une application mobile. Le système offre un 
+            guidage vocal en temps réel et permet aux proches de suivre l’utilisateur à distance.
+          Ce projet a été primé lors de l'Orange Summer Challenge, récompensant son impact social et son innovation..</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+      <!-- Projet 2 -->
+      <article class="project-card neumorph" data-tech="innovation">
+        <img id="projet-img" src="img/projet2.jpg" alt="Application Mobile" />
+        <h3>Orange Summer Chalenge 2024</h3>
+        <p>J’ai participé à l’Orange Summer Challenge, un programme intensif d’innovation 
+            où j’ai contribué à la conception du projet Nèmè, un dispositif d’assistance aux malvoyants.
+             En tant que designer, j’ai travaillé sur l’expérience utilisateur, le design du prototype et 
+             la présentation du projet.
+               Notre équipe a été primée pour l’innovation et l’impact social de notre solution...</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+      <!-- Projet 3 -->
+      <article class="project-card neumorph" data-tech="programmation">
+        <img id="projet-img" src="img/projet3.png" alt="Site de Cuisine Comorienne" />
+        <h3>MediManager</h3>
+        <p>MediManager est une application de gestion pharmaceutique destinée aux pharmacies et structures de santé.
+            Elle permet de gérer efficacement les stocks de médicaments, les ventes, les commandes fournisseurs et
+             les alertes de péremption.
+             Ce projet vise à optimiser la gestion des médicaments et à réduire les pertes tout en facilitant le
+              travail des professionnels de santé.</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+      <!-- Projet 4 -->
+      <article class="project-card neumorph" data-tech="mode">
+        <img id="projet-img" src="img/projet4.png" alt="Gestion Pharmaceutique" />
+        <h3>ComoShop</h3>
+        <p>ComoShop est un site web e-commerce conçu pour proposer une sélection raffinée de produits faits main, 
+          allant des sacs et bijoux aux cosmétiques. Développé par mes soins, ce site vise à valoriser la créativité
+           artisanale comorienne tout en offrant une expérience d'achat fluide, moderne et responsive. Chaque article 
+           est choisi avec soin pour répondre aux besoins d’une clientèle à la recherche d’authenticité, de style et de qualité..</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+      <!-- Projet 5 -->
+      <article class="project-card neumorph" data-tech="culture generale">
+        <img id="projet-img" src="img/projet5.jpg" alt="Boutique en Ligne" />
+        <h3>Evenement & expositions</h3>
+        <p>Participation à l’Orange Innovation Days avec présentation du projet Nèmè (primé),
+           à l’Afrinov Tech Expo pour valoriser mes initiatives tech, et au Salon des Étudiants Entrepreneurs avec 
+           le projet Nèmè</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+      <!-- Projet 6 -->
+      <article class="project-card neumorph" data-tech="mode">
+        <img id="projet-img" src="img/projet6.png" alt="Dashboard Power BI" />
+        <h3>Sakina</h3>
+        <p>Sakina est une marque artisanale qui propose des sacs faits main, alliant élégance, 
+          originalité et savoir-faire. Chaque pièce reflète un style unique et authentique,
+           pensé pour sublimer le quotidien avec raffinement.</p>
+        <a href="#" class="btn-link">Voir le projet</a>
+      </article>
+    </section>
+  </main>
+
+  <!-- Bouton retour en haut -->
+  <button id="scrollTop" title="Retour en haut">⬆</button>
+
+  <!-- Footer -->
+  <footer class="neumorph">
+    <p>© 2025 Amni Ayouba Mhoma - Tous droits réservés</p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
